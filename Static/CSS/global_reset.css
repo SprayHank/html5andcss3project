@@ -1,0 +1,9 @@
+
+/*= Gobal reset ==========================================*/
+body, div, address, blockquote, iframe, ul, ol, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, table, caption, th, td, form, legend, fieldset { margin: 0; padding: 0; font-size: 100%; }
+ol, ul { list-style: none; }
+img, iframe, fieldset { border: 0; }
+
+.clearfix:before, .clearfix:after { content: " "; /* 1 */ display: table; /* 2 */ }
+.clearfix:after { clear: both }
+.clearfix { zoom: 1; }
