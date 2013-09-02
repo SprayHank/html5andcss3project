@@ -1,6 +1,6 @@
 
 /*= Gobal reset ==========================================*/
-body, div, address, blockquote, iframe, ul, ol, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, table, caption, th, td, form, legend, fieldset { margin: 0; padding: 0; font-size: 100%; }
+body, div, address, blockquote, iframe, ul, ol, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, table, caption, th, td, form, legend, fieldset { margin: 0; padding: 0; font-size: 12px; }
 ol, ul { list-style: none; }
 img, iframe, fieldset { border: 0; }
 
