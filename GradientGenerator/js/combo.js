@@ -384,7 +384,18 @@ Window.prototype = {
 		var i = this.options.maximizable ? "<div class='" + f + "_maximize' id='" + a + "_maximize' onclick='Windows.maximize(\"" + a + "\", event)'> </div>" : "";
 		var c = this.options.resizable ? "class='" + f + "_sizer' id='" + a + "_sizer'" : "class='" + f + "_se'";
 		var b = "../themes/default/blank.gif";
-		d.innerHTML = g + h + i + "      <table id='" + a + "_row1' class=\"top table_window\">        <tr>          <td class='" + f + "_nw'></td>          <td class='" + f + "_n'><div id='" + a + "_top' class='" + f + "_title title_window'>" + this.options.title + "</div></td>          <td class='" + f + "_ne'></td>        </tr>      </table>      <table id='" + a + "_row2' class=\"mid table_window\">        <tr>          <td class='" + f + "_w'></td>            <td id='" + a + "_table_content' class='" + f + "_content' valign='top'>" + e + "</td>          <td class='" + f + "_e'></td>        </tr>      </table>        <table id='" + a + "_row3' class=\"bot table_window\">        <tr>          <td class='" + f + "_sw'></td>            <td class='" + f + "_s'><div id='" + a + "_bottom' class='status_bar'><span style='float:left; width:1px; height:1px'></span></div></td>            <td " + c + "></td>        </tr>      </table>    ";
+		d.innerHTML = g + h + i + "      <table id='" + a + "_row1' class=\"top table_window\">        <tr>          <td class='"
+			+ f + "_nw'></td>          <td class='" + f + "_n'><div id='" + a + "_top' class='" + f +
+			"_title title_window'>" + this.options.title + "</div></td>          <td class='" + f
+			+ "_ne'></td>        </tr>      </table>      <table id='" + a
+			+ "_row2' class=\"mid table_window\">        <tr>          <td class='"
+			+ f + "_w'></td>            <td id='" + a + "_table_content' class='" + f + "_content' valign='top'>" +
+			e + "</td>          <td class='" + f
+			+ "_e'></td>        </tr>      </table>        <table id='" + a
+			+ "_row3' class=\"bot table_window\">        <tr>          <td class='" + f +
+			"_sw'></td>            <td class='" + f
+			+ "_s'><div id='" + a + "_bottom' class='status_bar'><span style='float:left; width:1px; height:1px'></span></div></td>            <td "
+			+ c + "></td>        </tr>      </table>    ";
 		Element.hide(d);
 		this.options.parent.insertBefore(d, this.options.parent.firstChild);
 		Event.observe($(a + "_content"), "load", this.options.onload);
@@ -723,8 +734,16 @@ Window.prototype = {
 	_saveCookie: function() {
 		if(this.cookie) {
 			var a = "";
-			if(this.useLeft) {a += "l:" + (this.storedLocation ? this.storedLocation.left : this.element.getStyle("left"))} else {a += "r:" + (this.storedLocation ? this.storedLocation.right : this.element.getStyle("right"))}
-			if(this.useTop) {a += ",t:" + (this.storedLocation ? this.storedLocation.top : this.element.getStyle("top"))} else {a += ",b:" + (this.storedLocation ? this.storedLocation.bottom : this.element.getStyle("bottom"))}
+			if(this.useLeft) {
+				a += "l:" + (this.storedLocation ? this.storedLocation.left : this.element.getStyle("left"))
+			} else {
+				a += "r:" + (this.storedLocation ? this.storedLocation.right : this.element.getStyle("right"))
+			}
+			if(this.useTop) {
+				a += ",t:" + (this.storedLocation ? this.storedLocation.top : this.element.getStyle("top"))
+			} else {
+				a += ",b:" + (this.storedLocation ? this.storedLocation.bottom : this.element.getStyle("bottom"))
+			}
 			a += "," + (this.storedLocation ? this.storedLocation.width : this.width);
 			a += "," + (this.storedLocation ? this.storedLocation.height : this.height);
 			a += "," + this.isMinimized();
@@ -858,7 +877,10 @@ var Dialog = {dialogId: null, onCompleteFunc: null, callFunc: null, parameters: 
 		c.className = c.className || "alert";
 		var b = "class ='" + (c.buttonClass ? c.buttonClass + " " : "") + " ok_button'";
 		var e = "class ='" + (c.buttonClass ? c.buttonClass + " " : "") + " cancel_button'";
-		var d = "      <div class='" + c.className + "_message'>" + d + "</div>        <div class='" + c.className + "_buttons'>          <input type='button' value='" + f + "' onclick='Dialog.okCallback()' " + b + "/>          <input type='button' value='" + a + "' onclick='Dialog.cancelCallback()' " + e + "/>        </div>    ";
+		var d = "      <div class='" + c.className + "_message'>" +
+			d + "</div>        <div class='" + c.className + "_buttons'>          <input type='button' value='" +
+			f + "' onclick='Dialog.okCallback()' " + b + "/>          <input type='button' value='" +
+			a + "' onclick='Dialog.cancelCallback()' " + e + "/>        </div>    ";
 		return this._openDialog(d, c)
 	},
 	alert: function(c, b) {
@@ -1090,7 +1112,11 @@ var WindowUtilities = {
 			if(Prototype.Browser.WebKit && e == "overlay_modal") {setTimeout(function() {a()}, 10)} else {a()}
 		}
 	},
-	setCookie: function(b, a) {document.cookie = a[0] + "=" + escape(b) + ((a[1]) ? "; expires=" + a[1].toGMTString() : "") + ((a[2]) ? "; path=" + a[2] : "") + ((a[3]) ? "; domain=" + a[3] : "") + ((a[4]) ? "; secure" : "")},
+	setCookie: function(b, a) {
+		document.cookie = a[0] + "=" + escape(b) + ((a[1]) ? "; expires="
+			+ a[1].toGMTString() : "") + ((a[2]) ? "; path="
+			+ a[2] : "") + ((a[3]) ? "; domain=" + a[3] : "") + ((a[4]) ? "; secure" : "")
+	},
 	getCookie: function(c) {
 		var b = document.cookie;
 		var e = c + "=";

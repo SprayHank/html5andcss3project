@@ -2,9 +2,9 @@
 .dialog-panel { position: relative; border: 1px solid #999999; margin-top: 20px; }
 .dialog-panel .panel-label {
 	position: absolute;
-	top: -0.8em;
+	top: -0.7em;
 	left: .8em;
-	color:#FFFFFF;
+	color: #402D31;
 	background: #34495e;
 	padding: 0 3px;
 }
