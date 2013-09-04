@@ -7,9 +7,9 @@
  Please do not use without permission
 
  */
-if(typeof ColorZilla == "undefined") {var ColorZilla = {}}
 (function(window, document, undefined) {
 	"use strict";
+	if(typeof ColorZilla == "undefined") {var ColorZilla = {}}
 
 	ColorZilla.Cookie = {
 		set: function(c, f, b, CookieDomain, CookiePath) {
@@ -80,7 +80,9 @@ if(typeof ColorZilla == "undefined") {var ColorZilla = {}}
 		}
 	};
 	ColorZilla.LocalStorage = {
-		isSupported: function() {try {return"localStorage" in window && window.localStorage !== null} catch(a) {return false}},
+		isSupported: function() {
+			try {return"localStorage" in window && window.localStorage !== null} catch(a) {return false}
+		},
 		get: function(a, d) {
 			if(!this.isSupported()) {return d}
 			try {
@@ -100,4 +102,5 @@ if(typeof ColorZilla == "undefined") {var ColorZilla = {}}
 				return true
 			} catch(b) {return false}
 		}};
+	window.ColorZilla = ColorZilla
 })(this, document);

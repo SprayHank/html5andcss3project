@@ -849,7 +849,7 @@ if(typeof Gradient == "undefined") {var Gradient = {}}
 		this.userGradientPresetsIDCounter = this.userGradientPresets.length;
 		this.addUserPresets(this.userGradientPresets);
 		function f() {
-			Refresh.Web.DefaultColorPickerSettings.clientFilesPath = "images/";
+			Refresh.Web.DefaultColorPickerSettings.clientFilesPath = "GradientGenerator/images/";
 			_this.colorPicker = new Refresh.Web.ColorPicker("cp1", {startHex: "ffcc00", startMode: "s"});
 			_this.colorPicker.updateColorZilla = function() {
 				var k = Refresh.Web.ColorMethods.normalizeHex($("cp1_Hex").value);
@@ -1307,7 +1307,7 @@ if(typeof Gradient == "undefined") {var Gradient = {}}
 				this.cssCopyButtonElem.addClassName("no-flash");
 				return
 			}
-			ZeroClipboard.setMoviePath("images/ZeroClipboard.swf");
+			ZeroClipboard.setMoviePath("GradientGenerator/images/ZeroClipboard.swf");
 			var b = new ZeroClipboard.Client();
 			b.setHandCursor(true);
 			var a = this;
