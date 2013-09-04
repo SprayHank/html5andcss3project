@@ -1,0 +1,16 @@
+.noselect { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; }
+.dialog-panel { position: relative; border: 1px solid #999999; margin-top: 20px; }
+.dialog-panel .panel-label {
+	position: absolute;
+	top: -0.8em;
+	left: .8em;
+	color:#FFFFFF;
+	background: #34495e;
+	padding: 0 3px;
+}
+.presets .presets-container {
+	margin: 15px;
+	border: 1px solid #6D6379;
+	height: 115px;
+	overflow: auto;
+}
